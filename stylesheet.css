@@ -1,0 +1,29 @@
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav ul li{
+	display: inline;
+}
+
+nav {
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+#me {
+	max-width: 30%;
+}
+
+.courseSemester {
+	display: inline-block;
+}

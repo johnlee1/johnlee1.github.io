@@ -14,23 +14,16 @@ body {
 	margin-top: 0;
 	margin-left: auto;
 	margin-right: auto;
-/*	margin: auto;
-*/	background: #fff;
+	background: #fff;
 	display: block;
 	padding: 0;
 	border: 0;
-/*	border: 6px solid #949599;
-*/	vertical-align: baseline;
+	vertical-align: baseline;
 }
 
 #container {
 	margin: 0;
 	border: 0;
-/*	height: ;
-*//*	padding-top: 30px;
-	padding-right: 60px;
-	padding-left: 60px;
-	padding-bottom: ;*/
 	padding: 30px 60px 40px 60px;
 }
 
@@ -80,10 +73,6 @@ h1 {
 	text-align: center;
 }
 
-/*p {
-	text-align: center;
-}*/
-
 #specialText {
 	display: block;
 	width: 400px;
@@ -100,10 +89,8 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
-/*	border: 6px solid #949599;
-*/}
+}
 
-/*delete later*/
 #resume {
 	display: block;
 	margin-top: 100px;

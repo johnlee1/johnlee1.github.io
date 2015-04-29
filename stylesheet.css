@@ -80,9 +80,9 @@ h1 {
 	text-align: center;
 }
 
-p {
+/*p {
 	text-align: center;
-}
+}*/
 
 #specialText {
 	display: block;
@@ -118,8 +118,17 @@ p {
 	margin-right: auto;
 }
 
+#email {
+	color: #bbb;
+}
+
 .courseSemester {
 	display: inline-block;
+}
+
+.semesterTitle {
+	padding: 0 0 5px 0;
+	text-decoration: underline;
 }
 
 table {
@@ -148,4 +157,25 @@ td {
 /*	border: 6px solid #949599;
 */}
 
+#resumeColumn {
+	width: 44%;
+	display: inline-block;
+	margin: 0 96px 0 0;
+}
 
+#resumeColumn2 {
+	width: 44%;
+	display: inline-block;
+	color: #bbb;
+	vertical-align: top;
+}
+
+#resumeColumn3 {
+	width: 100%;
+}
+
+#resume {
+	border-top: 1px solid #bbb;
+	padding: 22.5px 0 0 0;
+	margin: 70px 0 0 0;
+}

@@ -50,6 +50,7 @@ a:hover {
 
 a {
 	text-decoration: none;
+	color: black;
 }
 
 nav ul li{
@@ -66,10 +67,6 @@ li.nav_circles {
 nav {
 	margin: 0 auto;
 	text-align: right;
-}
-
-a {
-	color: black;
 }
 
 h1 {
@@ -108,43 +105,6 @@ h1 {
 	margin-right: auto;
 }
 
-#email {
-	color: #bbb;
-}
-
-.courseSemester {
-	display: inline-block;
-}
-
-.semesterTitle {
-	padding: 0 0 5px 0;
-	text-decoration: underline;
-}
-
-table {
-	table-layout: fixed;
-	width: 100%;
-	margin-top: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-}
-
-td {
-	font-size: 9pt;
-	width: 380px;
-	height: 100px;
-	margin-top: 0px;
-	border-top: 0px;
-	padding-top: 15px;
-	padding-bottom: 50px;
-	border-bottom: 0px;
-	margin-bottom: 0px;
-	vertical-align: top;
-	margin-left: 30px;
-	margin-right: 0px;
-}
-
 #resumeColumn {
 	width: 55%;
 	display: inline-block;
@@ -158,21 +118,8 @@ td {
 	vertical-align: top;
 }
 
-#resumeColumn3 {
-	width: 100%;
-}
-
 #resume {
 	border-top: 1px solid #bbb;
 	padding: 22.5px 0 0 0;
 	margin: 30px 0 0 0;
-}
-
-#resumeCont {
-	padding: 22.5px 0 0 0;
-	margin: 70px 0 0 0;
-}
-
-#qpa {
-	font-size: 9pt;
 }

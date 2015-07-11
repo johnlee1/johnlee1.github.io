@@ -1,6 +1,17 @@
+.superContainer {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .myContainer {
  	padding: 30px 60px 15px 60px;
  	font-family: 'proxima nova', 'Helvetica Neue', Helvetica, 'nimbus-sans', Arial, sans-serif;
+}
+
+.bg {
+  width: 100%;
+  z-index: 0;
 }
 
 ul {
@@ -34,8 +45,4 @@ a:hover {
 
 .hovering:hover {
 	text-decoration: underline;
-}
-
-span {
-    font-size: 3em;
 }

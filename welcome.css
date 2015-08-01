@@ -1,5 +1,5 @@
 html { 
-  background: url(https://lh3.googleusercontent.com/KcMcvdxOLm693DOB74ItSVTpFX4ZQEJYIXomuJdboCU=w858-h643-no) no-repeat center center fixed; 
+  background: url(https://lh3.googleusercontent.com/kfrwQ98vVR8b4L-sisdRFB7FAd9weLmr50Qo6MiB7Gs=w771-h514-no) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,7 +10,7 @@ html {
 #text {
   z-index: 100;
   position: absolute;
-  color: white;
+  color: black;
   font-size: 24px;
   font-weight: bold;
 
@@ -22,7 +22,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   border-style: solid;
-  border-color: #FFFFFF;
+  border-color: black;
 }
 
 a { 

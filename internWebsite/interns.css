@@ -19,12 +19,6 @@ span {
     font-size: 3em;
 }
 
-.row {
-	margin-bottom: 60px;
+hr {
+	border-color: #A09E9E;
 }
-
-/*@media screen and (max-width: 991px) {
-    .row {
-        margin-bottom: 10px;
-    }
-}*/

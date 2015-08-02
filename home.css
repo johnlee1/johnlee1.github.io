@@ -43,3 +43,17 @@ a:hover {
 span {
     font-size: 3em;
 }
+
+.row {
+	margin-bottom: 60px;
+}
+
+@media screen and (max-width: 991px) {
+    .row {
+        margin-bottom: 60px;
+    }
+    .first-pic {
+        margin-bottom: 60px;
+    }
+}
+

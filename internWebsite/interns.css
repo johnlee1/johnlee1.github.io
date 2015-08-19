@@ -22,3 +22,9 @@ span {
 hr {
 	border-color: #A09E9E;
 }
+
+@media screen and (max-width: 991px) {
+    .container {
+    	width: 95%;
+    }
+}

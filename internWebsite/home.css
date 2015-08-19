@@ -55,5 +55,9 @@ span {
     .first-pic {
         margin-bottom: 60px;
     }
+    .container {
+    	width: 95%;
+    }
 }
+
 

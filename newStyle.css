@@ -1,0 +1,68 @@
+div {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.resume div {
+    overflow: auto;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+}
+
+.resume h1 {
+    font-family: 'futura pt', futura-pt;
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+.resume h2:first-of-type {
+    margin-top: 0;
+}
+
+.resume h2 {
+    font-family: 'proxima nova', proxima-nova;
+    font-size: 12pt;
+    line-height: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.1em;
+}
+
+.resume p {
+    margin-bottom: 0;
+    line-height: 1.5em;
+    opacity: .6;
+}
+
+.colOne {
+    width: 40%;
+    float: left;
+    overflow: auto;
+    clear: left;
+    text-align: right;
+    margin-left: 3%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.colTwo {
+    width: 57%;
+    margin-right: 30%;
+    float: right;
+    overflow: auto;
+    clear: right;
+}

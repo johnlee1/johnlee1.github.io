@@ -21,12 +21,13 @@ div {
 }
 
 .resume h1 {
-    font-family: 'futura pt', futura-pt;
+    font-family: 'Lato', proxima-nova;
     font-size: 12pt;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     line-height: 1.5em;
     margin-bottom: 1em;
+    font-weight: 400;
 }
 
 .resume h2:first-of-type {
@@ -34,17 +35,19 @@ div {
 }
 
 .resume h2 {
-    font-family: 'proxima nova', proxima-nova;
+    font-family: 'Lato', proxima-nova;
     font-size: 12pt;
     line-height: 1.5em;
     margin-top: 1em;
     margin-bottom: 0.1em;
+    font-weight: 400;
 }
 
 .resume p {
+    font-family: 'Lato', proxima-nova;
     margin-bottom: 0;
     line-height: 1.5em;
-    opacity: .6;
+    font-weight: 300;
 }
 
 .colOne {

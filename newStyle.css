@@ -51,7 +51,7 @@ div {
 }
 
 .colOne {
-    width: 40%;
+    width: 47%;
     float: left;
     overflow: auto;
     clear: left;
@@ -63,7 +63,7 @@ div {
 }
 
 .colTwo {
-    width: 57%;
+    width: 51%;
     margin-right: 30%;
     float: right;
     overflow: auto;

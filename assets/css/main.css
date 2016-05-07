@@ -2892,7 +2892,16 @@
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/two.jpg");
+		background: url("images/overlay.png"), url("../../images/two.gif");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
+/* Three */
+
+	#three {
+		background: url("images/overlay.png"), url("../../images/three.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -3199,11 +3208,11 @@
 		/* Main */
 
 			.main.style2 .content {
-				width: 40%;
+				width: 20%;
 			}
 
 			.main.style2.right .content {
-				left: 60%;
+				left: 80%;
 			}
 
 			.main.style2.inactive.left .content {
@@ -3237,11 +3246,11 @@
 		/* Main */
 
 			.main.style2 .content {
-				width: 50%;
+				width: 25%;
 			}
 
 			.main.style2.right .content {
-				left: 50%;
+				left: 75%;
 			}
 
 			.main.style2.inactive.left .content {
@@ -3267,11 +3276,11 @@
 		/* Main */
 
 			.main.style2 .content {
-				width: 60%;
+				width: 30%;
 			}
 
 			.main.style2.right .content {
-				left: 40%;
+				left: 70%;
 			}
 
 			.main.style2.inactive.left .content {

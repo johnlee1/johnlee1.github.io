@@ -1,0 +1,37 @@
+div {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.resume div {
+    overflow: auto;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+}
+
+h2 {
+    font-family: 'Lato', proxima-nova;
+    font-size: 12pt;
+    line-height: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.1em;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Lato', proxima-nova;
+    margin-bottom: 0;
+    line-height: 1.5em;
+    font-weight: 300;
+}

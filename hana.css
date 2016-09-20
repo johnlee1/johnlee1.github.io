@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+a:hover { 
+    color: #337ab7;
+}
+
+div {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    color: white;
+}
+
+h2 {
+    font-family: 'Lato', proxima-nova;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Lato', proxima-nova;
+    font-size: 2rem;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.point {
+    margin-bottom: 2rem;
+}

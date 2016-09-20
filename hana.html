@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="hana.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+		<title>John Lee</title>
+	</head>
+
+	<body class="container">
+
+		<br><br><br><br>
+
+		<div class="row">
+			<div>
+				<p><a href="index.html">< back to home</a></p>
+			</div>
+		</div>
+
+		<br><br><br><br>
+
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+		  		<h2>the project</h2>
+				<p>Hana is a web application that provides an easy way to share prayer requests.</p>
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+		  		<h2>the code</h2>
+				<p><a target="_blank" href="https://github.com/prayforhana/prayforhana-ui-beta">client side code</a></p>
+				<p><a target="_blank" href="https://github.com/prayforhana/prayforhana-api-beta">server side code</a></p>
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+		  		<h2>the tech stack</h2>
+				<p>The frontend is an angular 2 app served by nginx. The api backend is a nodejs app using hapi. Both nginx and node live in docker containers that are deployed on aws ec2 and configured by ecs. The nodejs app is connected to a mongodb database provided by mlab.</p>
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+		  		<h2>looking forward</h2>
+				<p class="point"><b>design:</b> A style guide, vision guide, and prayer guide are all in the process of being created in order to establish the intended ux of the app which will inform how the ui will be built. </p>
+				<p class="point"><b>security:</b> More filtering and validation needs to be added on both the client and server.</p>
+				<p class="point"><b>development:</b> I also want to look into options for integrating CI/CD into the development workflow.</p>
+				<p class="point"><b>infrastructure:</b> Currently the project is set up in a way that does not allow the frontend and backend to scale independently of each other since they are both configured to live on the same server instance. In the future it could be beneficial to have a more flexible microservices setup that allows independent horizontal scaling.</p>
+			</div>
+		</div>
+
+		<br><br><br><br><br><br>
+
+	</body>
+
+</html>

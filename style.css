@@ -8,6 +8,10 @@ div {
     vertical-align: baseline;
 }
 
+.resume {
+    margin-top: 10%;
+}
+
 .resume div {
     overflow: auto;
     -webkit-tap-highlight-color: transparent;
@@ -20,7 +24,21 @@ div {
     display: block;
 }
 
-h2 {
+.resume h1 {
+    font-family: 'Lato', proxima-nova;
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    font-weight: 400;
+}
+
+.resume h2:first-of-type {
+    margin-top: 0;
+}
+
+.resume h2 {
     font-family: 'Lato', proxima-nova;
     font-size: 12pt;
     line-height: 1.5em;
@@ -29,9 +47,29 @@ h2 {
     font-weight: 400;
 }
 
-p {
+.resume p {
     font-family: 'Lato', proxima-nova;
     margin-bottom: 0;
     line-height: 1.5em;
     font-weight: 300;
+}
+
+.colOne {
+    width: 42%;
+    float: left;
+    overflow: auto;
+    clear: left;
+    text-align: right;
+    margin-left: 3%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.colTwo {
+    width: 56%;
+    margin-right: 30%;
+    float: right;
+    overflow: auto;
+    clear: right;
 }

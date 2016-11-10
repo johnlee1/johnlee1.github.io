@@ -12,7 +12,7 @@ div {
     margin-top: 10%;
 }
 
-.resume div {
+/*.resume div {
     overflow: auto;
     -webkit-tap-highlight-color: transparent;
     margin: 0;
@@ -22,7 +22,7 @@ div {
     font: inherit;
     vertical-align: baseline;
     display: block;
-}
+}*/
 
 .resume h1 {
     font-family: 'Lato', proxima-nova;
@@ -72,4 +72,19 @@ div {
     float: right;
     overflow: auto;
     clear: right;
+}
+
+.title {
+    width: 40%;
+    margin-top: 9%;
+    margin-left: 20%;
+    margin-right: 15%;
+    float: left;
+    overflow: auto;
+}
+
+.title p {
+    font-family: 'Lato', proxima-nova;
+    font-size: 2rem;
+    margin-bottom: 5%;
 }

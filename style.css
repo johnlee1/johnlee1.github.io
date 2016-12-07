@@ -54,7 +54,7 @@ div {
     font-weight: 300;
 }
 
-.colOne {
+/*.colOne {
     width: 42%;
     float: left;
     overflow: auto;
@@ -72,19 +72,19 @@ div {
     float: right;
     overflow: auto;
     clear: right;
-}
+}*/
 
 .title {
-    width: 35%;
-    margin-top: 8%;
-    margin-left: 20%;
-    margin-right: 15%;
+    width: 36%;
+    margin-top: 9%;
+    margin-left: 19%;
+    margin-right: 10%;
     float: left;
     overflow: auto;
 }
 
 .title p {
     font-family: 'Lato', proxima-nova;
-    font-size: 2rem;
+    font-size: 1.9rem;
     margin-bottom: 5%;
 }

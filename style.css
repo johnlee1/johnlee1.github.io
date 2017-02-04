@@ -21,3 +21,7 @@ p {
 .last {
     margin-bottom: 10%;
 }
+
+.name {
+    font-size: 4rem;
+}

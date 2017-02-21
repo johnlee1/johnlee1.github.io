@@ -5,58 +5,63 @@
 	<head>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="hana.css"/>
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
 		<title>John Lee</title>
 	</head>
 
-	<body class="container">
+	<body>
+		<div class="container leftSpace">
+			<div class="items">
 
-		<br><br><br>
+				<div class="chunk">
+					<div class="chunkLeft"></div>
+					<div class="special nav"><a href="index.html">john lee</a></div>
+				</div>
 
-		<div class="row">
-			<div>
-				<p><a href="index.html">< back to home</a></p>
+				<div class="chunk">
+					<div class="chunkLeft">project</div>
+					<div class="chunkRight">
+						prayforhana.org
+					</div>
+				</div>
+
+				<div class="chunk">
+					<div class="chunkLeft">about</div>
+					<div class="chunkRight">
+						Hana is a web application that provides a platform for sharing prayer requests. It is an ongoing project I am working on with some friends. The goal is to make an application that connect people through prayer but without replacing real-life community.
+					</div>
+				</div>
+
+				<div class="chunk">
+					<div class="chunkLeft">target audience</div>
+					<div class="chunkRight">
+						Hana is designed for those who want to pray. An expected common use case of this application is learning how to pray for others when it is not possible to directly ask them for prayer requests. This could be helpful when praying for missionaries, missions organizations, world events, or people groups.
+					</div>
+				</div>
+
+				<div class="chunk">
+					<div class="chunkLeft">tone</div>
+					<div class="chunkRight">
+						The intended tone we are trying to achieve with Hana can be described with the following: biblical, informative, encourages reflection, simple. We want to design a ux/ui with this in mind.
+					</div>
+				</div>
+
+				<div class="chunk">
+					<div class="chunkLeft">tech infrastructure</div>
+					<div class="chunkRight">
+						The frontend is an angular 2 app served by nginx. The api backend is a node app using hapi. Both nginx and node live in docker containers that are deployed with aws ecs. The nodejs app is connected to a mongodb database provided by mlab. DNS is handled with namecheap and aws route53. Version control is handled with git and github.
+					</div>
+				</div>
+
+				<div class="chunk">
+					<div class="chunkLeft">looking forward</div>
+					<div class="chunkRight">
+						I want to create a more automated process for developing, building, and deploying the applications by looking into options for ci/cd. In regards to infrastructure, currently the project is set up in a way that does not allow the frontend and backend to scale independently of each other since they are both configured to live on the same server instance. In the future it could possibly be beneficial to have a more flexible microservices setup that allows independent horizontal scaling.
+					</div>
+				</div>
+
 			</div>
+
 		</div>
-
-		<br>
-
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-		  		<h2>the project</h2>
-				<p>Hana is a web application that provides a platform for sharing prayer requests. It is currently under development with an expected release date of February 1, 2017.</p>
-			</div>
-		</div>
-
- 		<br>
-
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-		  		<h2>the design</h2>
-				<p>design process ..</p>
-			</div>
-		</div> 
-
-		<br>
-
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-		  		<h2>the tech stack</h2>
-				<p>The frontend is an angular 2 app served by nginx. The api backend is a nodejs app using hapi. Both nginx and node live in docker containers that are deployed on aws ec2 and configured by ecs. The nodejs app is connected to a mongodb database provided by mlab.</p>
-			</div>
-		</div>
-
-		<br>
-
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-		  		<h2>looking forward</h2>
-				<p class="point"><b>development:</b> I want to look into options for integrating CI/CD into the development workflow.</p>
-				<p class="point"><b>infrastructure:</b> Currently the project is set up in a way that does not allow the frontend and backend to scale independently of each other since they are both configured to live on the same server instance. In the future it could possibly be beneficial to have a more flexible microservices setup that allows independent horizontal scaling.</p>
-			</div>
-		</div>
-
-		<br><br><br><br>
 
 	</body>
 

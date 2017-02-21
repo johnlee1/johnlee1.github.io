@@ -6,7 +6,7 @@ body {
     width: auto;
     display: block;
     font-family: 'Open Sans', "Helvetica Neue", sans-serif;
-    letter-spacing: 0.9px;  
+    letter-spacing: 0.8px;  
     background: #191919;
     color: #f4f4ec;
 }
@@ -19,7 +19,7 @@ body {
 .chunkLeft {
     vertical-align: top;
     display: inline-block;
-    width: 110px;
+    width: 120px;
     text-align: right;
     padding-right: 10px;
     font-weight: 400;

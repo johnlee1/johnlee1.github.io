@@ -27,7 +27,7 @@
 				<div class="chunk">
 					<div class="chunkLeft">about</div>
 					<div class="chunkRight">
-						Hana is a web application that provides a platform for sharing prayer requests. It is an ongoing project I am working on with some friends. The goal is to make an application that connects people through prayer but without replacing real-life community. I will be updating the app every other week with new features, ui updates, or bug fixes. It was released in late February 2017 and is currently in beta.
+						Hana is a web application that provides a platform for sharing prayer requests. The goal is to make an application that connects people through prayer but without replacing real-life community. I will be updating the app every other week with new features, ui updates, or bug fixes. It was released in early March 2017 and is currently in beta.
 					</div>
 				</div>
 
@@ -41,21 +41,28 @@
 				<div class="chunk">
 					<div class="chunkLeft">tone</div>
 					<div class="chunkRight">
-						The intended tone we are trying to achieve with Hana can be described with the following: biblical, informative, encourages reflection, simple. We want to design a ux/ui with this in mind.
+						The intended tone to be achieved with Hana can be described with the following: informative, encourages reflection, simple. The ux/ui sholud be designed with these in mind.
+					</div>
+				</div>
+
+				<div class="chunk">
+					<div class="chunkLeft">design</div>
+					<div class="chunkRight">
+						Hana is being designed with a user-centric approach through story mapping, empathy mapping, iteration, and user testing.
 					</div>
 				</div>
 
 				<div class="chunk">
 					<div class="chunkLeft">tech infrastructure</div>
 					<div class="chunkRight">
-						The frontend is an angular 2 app served by nginx. The api backend is a node app using hapi. Both nginx and node live in docker containers that are deployed with aws ecs. The nodejs app is connected to a mongodb database provided by mlab. DNS is handled with namecheap and aws route53. Version control is handled with git and github.
+						The frontend is an angular 2 app served by nginx. The api backend is a nodejs app using hapi. Both nginx and node live in docker containers that are deployed with aws ecs. The containers live in ec2 instances and are fronted by amazon's elastic load balancer. The nodejs app is connected to a mongodb database provided by mlab. DNS is handled with namecheap and aws route53. Version control is handled with git and github.
 					</div>
 				</div>
 
 				<div class="chunk">
 					<div class="chunkLeft">looking forward</div>
 					<div class="chunkRight">
-						I want to create a more automated process for developing, building, and deploying the applications by looking into options for ci/cd. In regards to infrastructure, currently the project is set up in a way that does not allow the frontend and backend to scale independently of each other since they are both configured to live on the same server instance. In the future it could possibly be beneficial to have a more flexible microservices setup that allows independent horizontal scaling.
+						I want to create a more automated process for developing, building, and deploying the applications by looking into more options for ci/cd. In regards to infrastructure, currently the project is set up in a way that does not allow the frontend and backend to scale independently of each other since they are both configured to live on the same server instance. In the future it could possibly be beneficial to have a more flexible microservices setup that allows independent horizontal scaling.
 					</div>
 				</div>
 

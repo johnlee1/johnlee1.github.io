@@ -14,7 +14,7 @@
 
                 <div class="chunk">
                     <div class="chunkLeft"></div>
-                    <div class="special nav"><a href="index.html">john lee</a></div>
+                    <div class="special nav"><a href="index.html">development</a></div>
                 </div>
 
                 <div class="chunk">
@@ -27,21 +27,7 @@
                 <div class="chunk">
                     <div class="chunkLeft">about</div>
                     <div class="chunkRight">
-                        Hana is a web application that provides a platform for sharing prayer requests. The goal is to make an application that connects people through prayer but without replacing real-life community. Hana is currently in beta and a mobile app (Android) is under development. A full front-end rewrite is on the way.
-                    </div>
-                </div>
-
-                <div class="chunk">
-                    <div class="chunkLeft">target users</div>
-                    <div class="chunkRight">
-                        Hana is designed for those who want to pray. An expected common use case of this application is learning how to pray for others when it is not possible to directly ask them for prayer requests. This could be helpful when praying for missionaries, missions organizations, world events, or people groups.
-                    </div>
-                </div>
-
-                <div class="chunk">
-                    <div class="chunkLeft">design</div>
-                    <div class="chunkRight">
-                        Hana is being designed collaboratively with a user-centric approach through story mapping, empathy mapping, iteration, and user testing. The intended tone to be achieved with Hana can be described with the following: informative, encourages reflection, simple. The ux/ui sholud be designed with these in mind.
+                        Hana is a web application that provides a platform for sharing prayer requests. The goal is to make an application that connects people through prayer but without replacing real-life community. Hana is currently in beta.
                     </div>
                 </div>
 
@@ -52,10 +38,24 @@
                     </div>
                 </div>
 
+               <div class="chunk">
+                    <div class="chunkLeft">implementing the design</div>
+                    <div class="chunkRight">
+                        Frontend code should implement the ui and be performant. (Read about the design process <a href="hana-design.html">here</a>.) The backend code and cloud infrastructure should be built to achieve both the design goals and performance goals (high availability, fast response time, etc).
+                    </div>
+                </div>
+
                 <div class="chunk">
                     <div class="chunkLeft">looking forward: devops and scalability</div>
                     <div class="chunkRight">
                         I want to create a more automated process for developing, building, and deploying the applications by looking into more options for ci/cd. In regards to infrastructure, currently the project is set up in a way that does not allow the frontend and backend to scale independently of each other since they are both configured to live on the same server instance. In the future it could possibly be beneficial to have a more flexible microservices setup that allows independent horizontal scaling.
+                    </div>
+                </div>
+
+                <div class="chunk">
+                    <div class="chunkLeft">looking forward: notification system</div>
+                    <div class="chunkRight">
+                        A q/a system will be added to the app and this will probably require a notification system to notify users of new responses to their questions. An option for a notification system is a pub/sub system using rabbitmq. Further research needs to be done in this area.
                     </div>
                 </div>
 

@@ -25,6 +25,20 @@
                 </div>
 
                 <div class="chunk">
+                    <div class="chunkLeft">code</div>
+                    <div class="chunkRight">
+                        <a href="https://github.com/prayforhana" target="_blank">https://github.com/prayforhana</a>
+                    </div>
+                </div>
+
+                <div class="chunk">
+                    <div class="chunkLeft">design</div>
+                    <div class="chunkRight">
+                        Read about the design process <a href="hana-design.html">here</a>.
+                    </div>
+                </div>
+
+                <div class="chunk">
                     <div class="chunkLeft">about</div>
                     <div class="chunkRight">
                         Hana is a web application that provides a platform for sharing prayer requests. The goal is to make an application that connects people through prayer but without replacing real-life community. Hana (beta) is live. Hana (rc1) is currently under development.
@@ -38,31 +52,24 @@
                     </div>
                 </div>
 
-               <div class="chunk">
-                    <div class="chunkLeft">implementing the design</div>
-                    <div class="chunkRight">
-                        Frontend code should implement the ui and be performant. The backend code and cloud infrastructure should be built to achieve both the design goals and performance goals (high availability, fast response time, etc). Read about the design process <a href="hana-design.html">here</a>.
-                    </div>
-                </div>
-
                 <div class="chunk">
-                    <div class="chunkLeft">looking forward: devops and scalability</div>
+                    <div class="chunkLeft">devops and scalability</div>
                     <div class="chunkRight">
                         I want to create a more automated process for developing, building, and deploying the applications by looking into more options for ci/cd. In regards to infrastructure, currently the project is set up in a way that does not allow the frontend and backend to scale independently of each other since they are both configured to live on the same server instance. In the future it could possibly be beneficial to have a more flexible microservices setup that allows independent horizontal scaling.
                     </div>
                 </div>
 
                 <div class="chunk">
-                    <div class="chunkLeft">looking forward: notification system</div>
+                    <div class="chunkLeft">notification system</div>
                     <div class="chunkRight">
                         A q/a system will be added to the app and this will probably require a notification system to notify users of new responses to their questions. An option for a notification system is a pub/sub system using rabbitmq. Further research needs to be done in this area.
                     </div>
                 </div>
 
                 <div class="chunk">
-                    <div class="chunkLeft">looking forward: topic and sentiment analysis</div>
+                    <div class="chunkLeft">topic and sentiment analysis</div>
                     <div class="chunkRight">
-                        A feature I'll be looking into adding is the insertion of sentiment-appropriate and topic-appropriate bible verses in the prayer mode slideshow. Once there is enough data (~50,000 prayer posts with manually added labels), I want to train a machine learning model to classify future prayer posts based on sentiment (happy, sad, etc) and topic (relationships, missions, etc). This model can then be used to classify future prayer posts. In this way, during a prayer mode slideshow, context-relevant bible verses (pre-selected to be associated with a sentiment/topic) can appear along with the classified prayer posts. Options for creating the model includes using google's prediciton api, TF-IDF kmeans with scikit-learn, and LDA or LSA with gensim. A vocabulary of prayer posts could be too sparse for good classification without a vector representaiton of words. One challenge is getting from word vectors to a good document representation (doc2vec) that works for clustering as most clustering algorithms require a fixed-length document vector. 
+                        A feature I'll be looking into adding is the insertion of sentiment-appropriate and topic-appropriate bible verses in the prayer mode slideshow. Once there is enough data (~50,000 prayer posts), I want to train a machine learning model to classify prayer posts based on sentiment (happy, sad, etc) and topic (relationships, missions, etc). This model can then be used to classify future prayer posts. In this way, during a prayer mode slideshow, context-relevant bible verses (pre-selected to be associated with a sentiment/topic) can appear along with the classified prayer posts. Options for creating the model includes using google's prediciton api, TF-IDF kmeans with scikit-learn, and LDA or LSA with gensim. A vocabulary of prayer posts could be too sparse for good classification without a vector representation of words. One challenge is getting from word vectors to a good document representation (doc2vec) that works for clustering as most clustering algorithms require a fixed-length document vector. 
                     </div>
                 </div>
 

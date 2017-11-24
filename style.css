@@ -1,25 +1,31 @@
 body {
     line-height: 1.5;
     font-family: 'Open Sans', "Helvetica Neue", sans-serif;
-    letter-spacing: 0.8px;  
-    background: #191919;
-    color: #f4f4ec;
+    letter-spacing: 0.5px;  
 }
 
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    width: 50%;    
+    margin-left: 20%;
+    margin-top: 10%;
 }
 
-.center {
+.name {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 7%;
+}
+
+.title {
+    color: rgba(0,132,255,.95);
     font-size: 24px;
     font-weight: 300;
-    width: 50%;
+    margin-bottom: 2%;
 }
 
-a, a:hover {
-    color: white;
-    text-decoration: underline;
+.text {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 7%;
+    margin-top: 1%;    
 }

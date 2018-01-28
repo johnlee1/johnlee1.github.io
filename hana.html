@@ -4,79 +4,65 @@
 
     <head>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="hana.css"/>
+        <link type="text/css" rel="stylesheet" href="style.css"/>
         <title>John Lee</title>
     </head>
 
     <body>
-        <!--
-        <div class="container leftSpace">
-            <div class="items">
-
-                <div class="chunk">
-                    <div class="chunkLeft"></div>
-                    <div class="special nav"><a href="index.html">development</a></div>
-                </div>
-
-                <div class="chunk">
-                    <div class="chunkLeft">project</div>
-                    <div class="chunkRight">
-                        <a href="https://prayforhana.org" target="_blank">prayforhana.org</a> (beta)
-                    </div>
-                </div>
-
-                <div class="chunk">
-                    <div class="chunkLeft">code</div>
-                    <div class="chunkRight">
-                        <a href="https://github.com/prayforhana" target="_blank">https://github.com/prayforhana</a>
-                    </div>
-                </div>
-
-                <div class="chunk">
-                    <div class="chunkLeft">design</div>
-                    <div class="chunkRight">
-                        Read about the design process <a href="hana-design.html">here</a>.
-                    </div>
-                </div>
-
-                <div class="chunk">
-                    <div class="chunkLeft">about</div>
-                    <div class="chunkRight">
-                        Hana is a web application that provides a platform for sharing prayer requests. The goal is to make an application that connects people through prayer but without replacing real-life community. Hana (beta) is live. Hana (rc1) is currently under development.
-                    </div>
-                </div>
-
-                <div class="chunk">
-                    <div class="chunkLeft">tech infrastructure</div>
-                    <div class="chunkRight">
-                        The frontend is an angular 2 app served by nginx. The api backend is a nodejs app using hapi. Both nginx and node live in docker containers that are deployed with aws ecs. The containers live in ec2 instances and are fronted by amazon's elastic load balancer. The nodejs app is connected to a mongodb database provided by mlab. DNS is handled with namecheap and aws route53. Version control is handled with git and github.
-                    </div>
-                </div>
-
-                <div class="chunk">
-                    <div class="chunkLeft">devops and scalability</div>
-                    <div class="chunkRight">
-                        I want to create a more automated process for developing, building, and deploying the applications by looking into more options for ci/cd. In regards to infrastructure, currently the project is set up in a way that does not allow the frontend and backend to scale independently of each other since they are both configured to live on the same server instance. In the future it could possibly be beneficial to have a more flexible microservices setup that allows independent horizontal scaling.
-                    </div>
-                </div>
-
-                <div class="chunk">
-                    <div class="chunkLeft">notification system</div>
-                    <div class="chunkRight">
-                        A q/a system will be added to the app and this will probably require a notification system to notify users of new responses to their questions. An option for a notification system is a pub/sub system using rabbitmq. Further research needs to be done in this area.
-                    </div>
-                </div>
-
-                <div class="chunk">
-                    <div class="chunkLeft">topic and sentiment analysis</div>
-                    <div class="chunkRight">
-                        A feature I'll be looking into adding is the insertion of sentiment-appropriate and topic-appropriate bible verses in the prayer mode slideshow. Once there is enough data (~50,000 prayer posts), I want to train a machine learning model to classify prayer posts based on sentiment (happy, sad, etc) and topic (relationships, missions, etc). This model can then be used to classify future prayer posts. In this way, during a prayer mode slideshow, context-relevant bible verses (pre-selected to be associated with a sentiment/topic) can appear along with the classified prayer posts. Options for creating the model includes using google's prediciton api, TF-IDF kmeans with scikit-learn, and LDA or LSA with gensim. A vocabulary of prayer posts could be too sparse for good classification without a vector representation of words. One challenge is getting from word vectors to a good document representation (doc2vec) that works for clustering as most clustering algorithms require a fixed-length document vector. 
-                    </div>
-                </div>
-
+        
+        <div class="main">
+            
+            <div class="title">
+                Hana
             </div>
-
-        </div> -->
+            <div class="text text2">
+                prayforhana.org
+            </div>
+            <!-- <div class="title">
+                About
+            </div>
+            <div class="text text2">
+                Hana is ..
+            </div>
+            <div class="title">
+                Design
+            </div>
+            <div class="text text2">
+                Hana is ..
+            </div> -->
+            <div class="title">
+                Technology Infrastructure
+            </div>
+            <div class="text text2">
+                The frontend is an angular 2 app served by nginx. 
+                The api backend is a nodejs app using hapi. 
+                Both nginx and node live in docker containers that are deployed with aws ecs. 
+                The containers live in ec2 instances and are fronted by amazon's elastic load balancer. 
+                The nodejs app is connected to a mongodb database provided by mlab. 
+                DNS is handled with namecheap and aws route53. 
+                Version control is handled with git and github.
+            </div>
+            <div class="title">
+                Devops and Scalability
+            </div>
+            <div class="text text2">
+                I want to create a more automated process for developing, building, and deploying the applications by looking into more options for ci/cd. 
+                In regards to infrastructure, currently the project is set up in a way that does not allow the frontend and backend to scale independently of each other since they are both configured to live on the same server instance. 
+                In the future it could possibly be beneficial to have a more flexible microservices setup that allows independent horizontal scaling.
+            </div>
+            <div class="title">
+                Topic and Sentiment Analysis
+            </div>
+            <div class="text text2">
+                A feature I'll be looking into adding is the insertion of sentiment-appropriate and topic-appropriate bible verses in the prayer mode slideshow. 
+                Once there is enough data (~50,000 prayer posts), I want to train a machine learning model to classify prayer posts based on sentiment (happy, sad, etc) and topic (relationships, missions, etc). 
+                This model can then be used to classify future prayer posts. 
+                In this way, during a prayer mode slideshow, context-relevant bible verses (pre-selected to be associated with a sentiment/topic) can appear along with the classified prayer posts. 
+                Options for creating the model includes using google's prediciton api, TF-IDF kmeans with scikit-learn, and LDA or LSA with gensim. 
+                A vocabulary of prayer posts could be too sparse for good classification without a vector representation of words. 
+                One challenge is getting from word vectors to a good document representation (doc2vec) that works for clustering as most clustering algorithms require a fixed-length document vector. 
+            </div>
+        </div>
 
     </body>
 

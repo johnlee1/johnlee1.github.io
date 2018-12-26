@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link href="./acf.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+        <title>John Lee</title>
+    </head>
+
+    <body>
+        
+            <div class="container">
+
+              <div class="left">
+                
+                <div class="special">
+                    Today, pray for:
+                </div>
+                <div class="special2">
+                    <span class="name highlight">
+                        
+                    </span>
+                </div>
+              </div>
+
+              <div class="right">
+                <img id="acf-photo" class="img-thumbnail rounded float-left align-middle" src="">
+              </div>
+
+                <div class="bottom">
+                    Encourage <span class="name"> </span> today!
+                </div>
+    
+            </div>
+
+    </body>
+    <script>
+        const photos = [
+            {
+                src: "./acf/abbey.jpeg",
+                name: "Abbey",
+                color: 'pink'
+            },
+            {
+                src: "./acf/alina.jpeg",
+                name: "Alina",
+                color: 'pink'
+            },
+            {
+                src: "./acf/andrew.jpeg",
+                name: "Andrew",
+                color: 'yellow'
+            },
+            {
+                src: "./acf/charlie.jpeg",
+                name: "Charlie",
+                color: 'yellow'
+            },
+            {
+                src: "./acf/Emily.jpeg",
+                name: "Emily",
+                color: 'pink'
+            },
+            {
+                src: "./acf/nowa.jpeg",
+                name: "Nowa",
+                color: 'yellow'
+            },
+            {
+                src: "./acf/valerie.jpeg",
+                name: "Valerie",
+                color: 'pink'
+            },
+        ]
+        let date = new Date()
+        let day = Math.floor(date.getTime() / 8.64e7)
+        let photo = photos[day % photos.length]
+        const image = document.getElementById("acf-photo")
+        image.setAttribute("src", photo.src)
+        const nameElms = document.getElementsByClassName("name")
+        for(let elm in nameElms) {
+            nameElms[elm].innerHTML = photo.name
+        }
+        const highlightElms = document.getElementsByClassName("highlight")
+        highlightElms[0].style.backgroundColor = photo.color
+    </script>
+</html>

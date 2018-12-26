@@ -1,6 +1,5 @@
 html,body, .container { 
     margin: 0;
-    /* height: 100%;  */
     font-family: 'Lato', sans-serif;
 }
 
@@ -40,23 +39,14 @@ html,body, .container {
     max-width: 100%;
     max-height: 50vh;
     border-radius: 3px;
-    /* border: none; */
 }
-
-.name {
-    /* text-decoration: underline; */
-}
-
-/* .row1 {
-    height: 80%;
-} */
 
 .special {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .special2 {
-    margin: 4% 0px 10px;
-    font-size: 6rem;
+    margin: 7% 0px 10px;
+    font-size: 5rem;
     text-align: center;
 }

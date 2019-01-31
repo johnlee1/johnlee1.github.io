@@ -58,9 +58,29 @@
                 color: 'yellow'
             },
             {
-                src: "./acf/Emily.jpeg",
+                src: "./acf/christian.jpeg",
+                name: "Christian",
+                color: 'yellow'
+            },
+            {
+                src: "./acf/emily.jpeg",
                 name: "Emily",
                 color: 'pink'
+            },
+            {
+                src: "./acf/francis.jpeg",
+                name: "Francis",
+                color: 'yellow'
+            },
+            {
+                src: "./acf/jed.jpeg",
+                name: "Jed",
+                color: 'yellow'
+            },
+            {
+                src: "./acf/matthew.jpeg",
+                name: "Matthew",
+                color: 'yellow'
             },
             {
                 src: "./acf/nowa.jpeg",
@@ -68,13 +88,28 @@
                 color: 'yellow'
             },
             {
+                src: "./acf/ricky.jpeg",
+                name: "Ricky",
+                color: 'yellow'
+            },
+            {
+                src: "./acf/shanice.jpeg",
+                name: "Shanice",
+                color: 'pink'
+            },
+            {
                 src: "./acf/valerie.jpeg",
                 name: "Valerie",
                 color: 'pink'
             },
+            {
+                src: "./acf/will.jpeg",
+                name: "Will",
+                color: 'yellow'
+            },
         ]
         let date = new Date()
-        let day = Math.floor(date.getTime() / 8.64e7)
+        let day = Math.floor((date.getTime() -300*60*1000) / 8.64e7)
         let photo = photos[day % photos.length]
         const image = document.getElementById("acf-photo")
         image.setAttribute("src", photo.src)

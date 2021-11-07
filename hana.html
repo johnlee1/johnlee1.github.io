@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-
 <html>
-
     <head>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="hana.css"/>
         <title>John Lee</title>
     </head>
-
     <body>
-        
         <div class="main">
-            
             <div class="title">
                 Hana
             </div>
@@ -20,18 +15,6 @@
                 <a href="https://github.com/johnlee1/hana-ui-3" target="_blank">UI code</a> and the 
                 <a href="https://github.com/johnlee1/hana-api" target="_blank">API code</a>.
             </div>
-            <!-- <div class="title">
-                About
-            </div>
-            <div class="text text2">
-                Hana is ..
-            </div>
-            <div class="title">
-                Design
-            </div>
-            <div class="text text2">
-                Hana is ..
-            </div> -->
             <div class="title">
                 Technology Infrastructure
             </div>
@@ -45,40 +28,17 @@
                 Version control is handled with git and github.
             </div>
             <div class="title">
-                Devops and Scalability
-            </div>
-            <div class="text text2">
-                I want to create a more automated process for developing, building, and deploying the applications by looking into more options for ci/cd. 
-                In regards to infrastructure, currently the project is set up in a way that does not allow the frontend and backend to scale independently of each other since they are both configured to live on the same server instance. 
-                In the future it could possibly be beneficial to have a more flexible microservices setup that allows independent horizontal scaling.
-            </div>
-            <div class="title">
-                Topic and Sentiment Analysis
-            </div>
-            <div class="text text2">
-                A feature I'll be looking into adding is the insertion of sentiment-appropriate and topic-appropriate bible verses in the prayer mode slideshow. 
-                Once there is enough data (~50,000 prayer posts), I want to train a machine learning model to classify prayer posts based on sentiment (happy, sad, etc) and topic (relationships, missions, etc). 
-                This model can then be used to classify future prayer posts. 
-                In this way, during a prayer mode slideshow, context-relevant bible verses (pre-selected to be associated with a sentiment/topic) can appear along with the classified prayer posts. 
-                Options for creating the model includes using google's prediciton api, TF-IDF kmeans with scikit-learn, and LDA or LSA with gensim. 
-                A vocabulary of prayer posts could be too sparse for good classification without a vector representation of words. 
-                One challenge is getting from word vectors to a good document representation (doc2vec) that works for clustering as most clustering algorithms require a fixed-length document vector. 
-            </div>
-            <div class="title">
                 Design (UI/UX)
             </div>
             <div class="text text2">
                 Hana is a web application that provides a platform for sharing prayer requests. The goal is to make an application that connects people through prayer but without 
                 replacing real-life community.
-                Hana is designed for those who want to pray. An expected common use case of this application is learning how to pray for others when it is not possible to directly ask them for prayer requests. 
-                Through dialogue with several designers at Carnegie Mellon University, we've come with a four-stage plan to build this application: gain a deep understanding of the problem, validate a solution, design the solution, and build the solution. 
+                Through dialogue with several designer friends, we came up with a four-stage plan to build this application: gain a deep understanding of the problem, validate a solution, design the solution, and build the solution. 
                 The problem to be solved is "I want to pray for X, but I don't know how to pray for X". Two types of activities were conducted to gain a deeper understanding of this problem. The first activity was to interview people with this problem (user research). The second activity was for me to go and try to find prayer requests for people whom I wanted to pray for. I choose the Nepali refugee community in Pittsburgh and through talking to friends, visiting churches, and visiting the community itself, I learned what it is like to discover prayer requests of people I do not yet personally know.
                 Validating a solution was done by rapid prototyping of the concept (using existing blogging and q/a platforms) to prototype the experience of posting and discovering prayer requests. This allowed us to discover painpoints of using existing platforms and assess the validity of building a new platform.
                 Hana is being designed collaboratively with a user-centric approach through story mapping, empathy mapping, iteration, and user testing. The intended tone to be achieved with Hana can be described with the following: informative, encourages reflection, simple. The ux/ui sholud be designed with these in mind.
                 Building the solution will require communication between designers and developer to ensure that the development is in-align with the design.
                 The biggest lesson I've learned is the importance of understanding the problem space and of validating a solution. Designing and building a solution are more well-defined tasks that I am confident can be done. The harder problems to solve have been understanding the problem and validating a solution. Understanding the problem has been difficult because of the lack of historical data (there are no existing products on the market to learn from) and the inherent difficulty of finding prayer requests of people whom I do not know. Validating a solution has been invaluable because it ensures that the right product is being built. The difficulty of validating a solution has been taking a very large solution space and coming up with reasonable constraints that narrows the solution space to a single web product.
         </div>
-
     </body>
-
 </html>

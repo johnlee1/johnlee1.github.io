@@ -1,0 +1,13 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3em;
+}
+
+.section{
+    margin-left: 2em;
+}
+
+.link {
+    margin-bottom: 1em;
+}

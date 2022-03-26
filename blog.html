@@ -1,25 +1,1072 @@
+<!-- Code taken from: https://www.github.com/jimniels/blog/ -->
+
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en-us" id="top">
     <head>
-        <link type="text/css" rel="stylesheet" href="blog.css"/>
-        <title>John Lee</title>
+        <title>John Lee’s Blog</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="p-author" />
+
+        <!-- Inline all our styles -->
+        <style>
+            /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+            /*
+            Document
+            ========
+            */
+
+            /**
+            Use a better box model (opinionated).
+            */
+
+            *,
+            *::before,
+            *::after {
+            box-sizing: border-box;
+            }
+
+            /**
+            Use a more readable tab size (opinionated).
+            */
+
+            :root {
+            -moz-tab-size: 4;
+            tab-size: 4;
+            }
+
+            /**
+            1. Correct the line height in all browsers.
+            2. Prevent adjustments of font size after orientation changes in iOS.
+            */
+
+            html {
+            line-height: 1.15; /* 1 */
+            -webkit-text-size-adjust: 100%; /* 2 */
+            }
+
+            /*
+            Sections
+            ========
+            */
+
+            /**
+            Remove the margin in all browsers.
+            */
+
+            body {
+            margin: 0;
+            }
+
+            /**
+            Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+            */
+
+            body {
+            font-family: system-ui, -apple-system,
+            /* Firefox supports this but not yet `system-ui` */ "Segoe UI", Roboto,
+            Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            }
+
+            /*
+            Grouping content
+            ================
+            */
+
+            /**
+            1. Add the correct height in Firefox.
+            2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+            */
+
+            hr {
+            height: 0; /* 1 */
+            color: inherit; /* 2 */
+            }
+
+            /*
+            Text-level semantics
+            ====================
+            */
+
+            /**
+            Add the correct text decoration in Chrome, Edge, and Safari.
+            */
+
+            abbr[title] {
+            text-decoration: underline dotted;
+            }
+
+            /**
+            Add the correct font weight in Edge and Safari.
+            */
+
+            b,
+            strong {
+            font-weight: bolder;
+            }
+
+            /**
+            1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+            2. Correct the odd 'em' font sizing in all browsers.
+            */
+
+            code,
+            kbd,
+            samp,
+            pre {
+            font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+            monospace; /* 1 */
+            font-size: 1em; /* 2 */
+            }
+
+            /**
+            Add the correct font size in all browsers.
+            */
+
+            small {
+            font-size: 80%;
+            }
+
+            /**
+            Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+            */
+
+            sub,
+            sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+            }
+
+            sub {
+            bottom: -0.25em;
+            }
+
+            sup {
+            top: -0.5em;
+            }
+
+            /*
+            Tabular data
+            ============
+            */
+
+            /**
+            1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+            2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+            */
+
+            table {
+            text-indent: 0; /* 1 */
+            border-color: inherit; /* 2 */
+            }
+
+            /*
+            Forms
+            =====
+            */
+
+            /**
+            1. Change the font styles in all browsers.
+            2. Remove the margin in Firefox and Safari.
+            */
+
+            button,
+            input,
+            optgroup,
+            select,
+            textarea {
+            font-family: inherit; /* 1 */
+            font-size: 100%; /* 1 */
+            line-height: 1.15; /* 1 */
+            margin: 0; /* 2 */
+            }
+
+            /**
+            Remove the inheritance of text transform in Edge and Firefox.
+            1. Remove the inheritance of text transform in Firefox.
+            */
+
+            button,
+            select {
+            /* 1 */
+            text-transform: none;
+            }
+
+            /**
+            Correct the inability to style clickable types in iOS and Safari.
+            */
+
+            button,
+            [type="button"],
+            [type="reset"],
+            [type="submit"] {
+            -webkit-appearance: button;
+            }
+
+            /**
+            Remove the inner border and padding in Firefox.
+            */
+
+            ::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+            }
+
+            /**
+            Restore the focus styles unset by the previous rule.
+            */
+
+            :-moz-focusring {
+                outline: 1px dotted ButtonText;
+            }
+
+            /**
+            Remove the additional ':invalid' styles in Firefox.
+            See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+            */
+
+            :-moz-ui-invalid {
+            box-shadow: none;
+            }
+
+            /**
+            Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+            */
+
+            legend {
+            padding: 0;
+            }
+
+            /**
+            Add the correct vertical alignment in Chrome and Firefox.
+            */
+
+            progress {
+            vertical-align: baseline;
+            }
+
+            /**
+            Correct the cursor style of increment and decrement buttons in Safari.
+            */
+
+            ::-webkit-inner-spin-button,
+            ::-webkit-outer-spin-button {
+            height: auto;
+            }
+
+            /**
+            1. Correct the odd appearance in Chrome and Safari.
+            2. Correct the outline style in Safari.
+            */
+
+            [type="search"] {
+            -webkit-appearance: textfield; /* 1 */
+            outline-offset: -2px; /* 2 */
+            }
+
+            /**
+            Remove the inner padding in Chrome and Safari on macOS.
+            */
+
+            ::-webkit-search-decoration {
+            -webkit-appearance: none;
+            }
+
+            /**
+            1. Correct the inability to style clickable types in iOS and Safari.
+            2. Change font properties to 'inherit' in Safari.
+            */
+
+            ::-webkit-file-upload-button {
+            -webkit-appearance: button; /* 1 */
+            font: inherit; /* 2 */
+            }
+
+            /*
+            Interactive
+            ===========
+            */
+
+            /*
+            Add the correct display in Chrome and Safari.
+            */
+
+            summary {
+            display: list-item;
+            }
+            :root {
+            --border-radius: 10px;
+
+            /* Theme color that gets set by default but is configurable by the user */
+            --c-theme-h: var(--c-blue-h);
+            --c-theme-s: var(--c-blue-s);
+            --c-theme-l: var(--c-blue-l);
+            --c-theme: hsl(var(--c-theme-h) var(--c-theme-s) var(--c-theme-l));
+
+            --c-bg: hsl(var(--c-theme-h) var(--c-theme-s) 100%);
+            --c-fg: hsl(var(--c-theme-h) var(--c-theme-s) 97%);
+            --c-text: hsl(var(--c-theme-h) var(--c-theme-s) 5%);
+
+            /* 
+            * https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/color/
+            * accessible
+            */
+            --c-blue-h: 223;
+            --c-blue-s: 100%;
+            --c-blue-l: 43%;
+            --c-red-h: 354;
+            --c-red-s: 100%;
+            --c-red-l: 42%;
+            --c-green-h: 135;
+            --c-green-s: 59%;
+            --c-green-l: 34%;
+            --c-yellow-h: 27;
+            --c-yellow-s: 100%;
+            --c-yellow-l: 35%;
+            --c-purple-h: 280;
+            --c-purple-s: 43%;
+            --c-purple-l: 47%;
+            --c-pink-h: 343;
+            --c-pink-s: 87%;
+            --c-pink-l: 44%;
+            --c-orange-h: 16;
+            --c-orange-s: 100%;
+            --c-orange-l: 39%;
+
+            /* not supported yet */
+            --c-theme-mint: 177 83% 28%;
+            --c-theme-teal: 189 100% 30%;
+            --c-theme-cyan: 199 100% 32%;
+            --c-theme-indigo: 241 52% 42%;
+            --c-theme-brown: 33 30% 38%;
+            }
+
+            /* background-color: -apple-system-control-background;
+            color: text */
+
+            @media (prefers-color-scheme: dark) {
+            :root {
+            --c-bg: hsl(var(--c-theme-h) calc(var(--c-theme-s) - 20%) 2%);
+            --c-fg: hsl(var(--c-theme-h) calc(var(--c-theme-s) - 20%) 6%);
+            --c-text: hsl(var(--c-theme-h) var(--c-theme-s) 98%);
+
+            --c-blue-h: 211;
+            --c-blue-s: 100%;
+            --c-blue-l: 63%;
+            --c-red-h: 3;
+            --c-red-s: 100%;
+            --c-red-l: 69%;
+            --c-green-h: 135;
+            --c-green-s: 70%;
+            --c-green-l: 52%;
+            --c-yellow-h: 48;
+            --c-yellow-s: 100%;
+            --c-yellow-l: 57%;
+            --c-purple-h: 280;
+            --c-purple-s: 100%;
+            --c-purple-l: 78%;
+            --c-pink-h: 348;
+            --c-pink-s: 100%;
+            --c-pink-l: 70%;
+            --c-orange-h: 36;
+            --c-orange-s: 100%;
+            --c-orange-l: 63%;
+
+            /* not supported yet */
+            --c-theme-mint: 177 56% 62%;
+            --c-theme-teal: 189 100% 68%;
+            --c-theme-cyan: 197 100% 72%;
+            --c-theme-indigo: 241 100% 72%;
+            --c-theme-brown: 34 34% 56%;
+            }
+            }
+
+            *,
+            *:before,
+            *:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            }
+
+            html {
+                color-scheme: light dark;
+                font-size: 19px;
+                line-height: 1.5;
+                background: var(--c-bg);
+                color: var(--c-text);
+                /* this comes in normalize
+                font-family: 
+                ui-sans-serif, 
+                system-ui, 
+                -system-ui, 
+                -apple-system,
+                BlinkMacSystemFont,
+                Roboto, Helvetica, Arial, 
+                sans-serif, 
+                "Apple Color Emoji"; */
+            }
+
+            @media screen and (min-width: 700px) {
+                html {
+                    font-size: 22px; /* 24 originally */
+                }
+            }
+
+            /* ==========================================================================
+            Links
+            ========================================================================== */
+
+            a {
+            text-decoration: none;
+            color: var(--c-theme);
+            }
+
+            a:hover {
+            text-decoration: underline;
+            filter: brightness(115%) saturate(1.15);
+            }
+
+            a:active {
+            filter: brightness(50%);
+            }
+
+            .copy a {
+            text-decoration: underline;
+            }
+
+            /* Styles for footnotes */
+            .copy a[href^="#fn"] {
+            text-decoration: none;
+            }
+            .copy a[href^="#fnref"] {
+            font-family: sans-serif; /* keep the backlink from displaying as an emoji */
+            }
+            .footnotes {
+            font-size: 0.91rem;
+            }
+
+            /* ==========================================================================
+            Images & Video
+            ========================================================================== */
+
+            img,
+            video {
+            max-width: 100%;
+            height: auto;
+            }
+
+            /* ==========================================================================
+            Typography
+            ========================================================================== */
+
+            h1,
+            h2,
+            h3,
+            h4 {
+            line-height: 1.1;
+            margin-top: 1rem;
+            margin-bottom: 0.66666666em;
+
+            /* Long headlines that are 1 word
+            https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            -ms-word-break: break-all;
+            }
+
+            h1 {
+            font-size: 2.5rem; /* 60px */
+            font-weight: 700;
+            }
+
+            h2 {
+            font-size: 2rem; /* 48px */
+            font-weight: 600;
+            }
+
+            h3 {
+            font-size: 1.5rem; /* 36px */
+            font-weight: 500;
+            }
+
+            h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.01rem;
+            font-weight: 700;
+            }
+
+            /* ==========================================================================
+            Misc. Elements
+            ========================================================================== */
+
+            blockquote {
+                border-left: 1px solid;
+                padding-left: 1em;
+                margin-left: 0;
+                font-style: italic;
+            }
+
+            blockquote em,
+            blockquote code {
+                font-style: normal;
+            }
+
+            pre {
+                max-width: 100%;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                margin-top: 1.618rem;
+                margin-bottom: 1.618rem;
+                font-size: 0.9rem;
+            }
+
+            hr {
+                border: 0;
+                border-bottom: 1px solid;
+                width: 80%;
+                max-width: 400px !important;
+                margin: 1.618rem 0;
+            }
+
+            /* ==========================================================================
+            Tables
+            ========================================================================== */
+            table {
+                max-width: none;
+                display: block;
+                overflow: auto;
+                width: 100%;
+                border-collapse: collapse;
+                border-spacing: 0;
+                font-size: 0.85em;
+            }
+
+            table th {
+                text-align: left;
+            }
+
+            table thead {
+                border-top: 1px solid;
+                border-bottom: 1px solid;
+            }
+            table tbody {
+                border-bottom: 1px solid;
+            }
+
+            table tbody tr:nth-child(2n + 1) {
+                background-color: var(--c-bg-sidebar);
+            }
+
+            table th,
+            table td {
+                padding: 0.325em 1em;
+            }
+            body {
+                margin: 1.618rem calc(1.618 * 2rem);
+            }
+
+            @media screen and (max-width: 650px) {
+                body {
+                    margin: calc(1.618rem / 2);
+                    margin-bottom: calc(1.618rem * 3);
+                }
+            }
+
+            /* =============================================================================
+            Primary Site Navigation
+            ========================================================================== */
+
+            /* When there's no JS */
+            site-nav {
+                display: flex;
+                align-items: center;
+                gap: calc(1.618rem / 4);
+            }
+
+            site-nav a[href="/"] {
+                margin-right: calc(1.618rem / 2);
+            }
+
+            site-nav svg {
+                fill: var(--c-theme);
+            }
+
+            site-nav[has-js] {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .sn-top {
+                display: flex;
+                align-items: center;
+            }
+
+            @media screen and (max-width: 599px) {
+                .sn-top {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+            }
+
+            .sn-bottom {
+                display: none;
+                padding: calc(1.618rem / 2);
+                background: var(--c-fg);
+                gap: calc(1.618rem / 2);
+                flex-wrap: wrap;
+                margin-left: calc(1.618rem / -2);
+                padding-left: calc(1.618rem / 2);
+                width: calc(100% + calc(1.618rem / 1));
+            }
+            site-nav[has-js][open] .sn-bottom {
+                display: flex;
+            }
+
+            @media screen and (min-width: 600px) {
+                .sn-bottom {
+                    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+                    gap: 1.618rem;
+                    flex-wrap: nowrap;
+                    margin-left: calc(1.618rem * -2);
+                    padding-left: calc(1.618rem * 2);
+                    padding-right: calc(1.618rem * 2);
+                    width: auto;
+                }
+            }
+            @media screen and (min-width: 960px) {
+                .sn-bottom-section {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+
+            /* Site Navigation
+            ========================================================================== */
+
+            site-nav[has-js] ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                gap: calc(1.618rem / 2);
+            }
+
+            site-nav button {
+                background: transparent;
+                border: none;
+                margin: 0;
+                padding: 0;
+                color: var(--c-theme);
+                border-radius: var(--border-radius);
+                display: flex;
+                align-items: center;
+                padding: calc(1.618rem / 6);
+            }
+
+            site-nav button:hover {
+                background: var(--c-fg);
+            }
+
+            site-nav ul li {
+                display: flex;
+                align-items: center;
+            }
+
+            site-nav ul a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+            }
+
+            site-nav[has-js] h5 {
+                font-size: 1rem;
+                margin: 0 calc(1.618rem / 4) 0 0;
+            }
+
+            site-nav[has-js] h5:after {
+                content: ":";
+            }
+
+            .sn-color-picker {
+                display: flex;
+                align-items: center;
+                gap: calc(1.618rem / 2);
+                position: relative;
+                top: 2px;
+            }
+
+            .sn-color-picker input {
+                display: none;
+            }
+
+            .sn-color-picker label {
+                width: 24px;
+                height: 24px;
+                border: 3px solid var(--c-fg);
+                display: block;
+                text-indent: -9999px;
+                border-radius: 50%;
+            }
+
+            .sn-color-picker input:checked + label {
+                box-shadow: 0 0 0 2px var(--c-theme);
+            }
+
+            @media screen and (min-width: 600px) {
+                .sn-color-picker {
+                    gap: calc(1.618rem / 4);
+                }   
+                .sn-color-picker label {
+                    width: 21px;
+                    height: 21px;
+                    border-width: 2px;
+                }
+            }
+
+            /* =============================================================================
+            Article Header
+            ========================================================================== */
+
+            article header h1 {
+                max-width: 45rem;
+                margin-bottom: calc(1.618rem / 4);
+            }
+
+            article header time {
+                opacity: 0.625;
+                display: block;
+            }
+
+            /* =============================================================================
+            Copy
+            ========================================================================== */
+
+            .copy > *:not(table):not(pre) {
+                max-width: 32rem;
+                display: block;
+            }
+            .copy > p code {
+                word-wrap: break-word;
+            }
+            .copy .image-container {
+                max-width: 1200px;
+            }
+            .copy .image-container span {
+                font-size: 0.75rem;
+                font-style: italic;
+                opacity: 0.5;
+                max-width: 32rem;
+                display: block;
+            }
+
+            /* =============================================================================
+            General
+            ========================================================================== */
+
+            /**
+            * Posts Lists - @TODO consider changing to something representing that it's 
+            * a flat key/val list
+            */
+            .posts-list {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 1.618rem 0;
+            }
+
+            .posts-list li {
+                margin-bottom: calc(1.618rem / 2);
+            }
+
+            .posts-list li a {
+                display: block;
+            }
+
+            .posts-list time {
+                font-variant-numeric: tabular-nums;
+                font-size: 0.7rem;
+                opacity: 0.5; /* @TODO change to gray */
+                white-space: nowrap;
+            }
+
+            .posts-list small {
+                padding: 0 0.5em;
+                font-size: 0.6em;
+                background: rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                margin-left: 0.5em;
+                order: 3;
+                opacity: 0.5; /* @TODO gray? matches <time> */
+                align-self: center;
+                white-space: nowrap;
+            }
+
+            @media screen and (min-width: 520px) {
+                .posts-list li {
+                    margin-bottom: calc(1.618rem / 4);
+                    display: flex;
+                    align-items: baseline;
+                }
+                .posts-list li a {
+                    order: 2;
+                }
+                .posts-list time {
+                    order: 1;
+                    margin-right: calc(1.618rem / 2);
+                }
+            }
+
+            /* =============================================================================
+            <BlogPostsStatus>
+            ========================================================================== */
+
+            #bps {
+                border-radius: var(--border-radius);
+                display: flex;
+                align-items: flex-start;
+                font-size: 0.7777rem;
+                max-width: 50em;
+            }
+            #bps[open] {
+                background: var(--c-fg);
+            }
+
+            #bps summary,
+            #bps > div {
+                position: relative;
+                padding: 10px 15px;
+            }
+
+            #bps[open] summary:after {
+                content: "";
+                width: calc(100% - 30px);
+                height: 1px;
+                position: absolute;
+                bottom: 0;
+                left: 15px;
+                background: var(--color-border);
+            }
+
+            #bps > div {
+                text-align: center;
+                color: var(--color-text-light);
+            }
+
+            /* =============================================================================
+            SVG Icons
+            ========================================================================== */
+
+            .icon {
+                width: 24px;
+                height: 24px;
+            }
+
+            /* =============================================================================
+            Other
+            ========================================================================== */
+
+            @media screen and (min-width: 50rem) {
+                .list-2col {
+                    column-count: 2;
+                    max-width: 40rem;
+                }
+            }
+            pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#a0a1a7;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e45649}.hljs-literal{color:#0184bb}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#50a14f}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#4078f2}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#c18401}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
+
+                @media screen and (prefers-color-scheme: dark) {
+                    pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
+                }
+        </style>
+
     </head>
 
-    <body>
-        <div class="wrapper">
-            <div class="section">
-                <h2>Bible Summaries</h2>
-                <div class="link"><a href="ana.html" target="_blank">Genesis</a></div>
-                <div class="link"><a href="ana.html" target="_blank">Exodus</a></div>
-            </div>
-            <div class="section">
-                <h2>Other Writings</h2>
-                <div class="link"><a href="ana.html" target="_blank">Church History</a></div>
-                <div class="link"><a href="ana.html" target="_blank">Biblical Theology</a></div>
-            </div>
-        </div>
-    </body>
 
+  <body>
+    <!-- Icon Sprite -->
+    <svg style="display: none">
+        <defs>
+        <symbol id="about" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor">
+        <path d="M0 0h24v24H0V0z" fill="none"/>
+        <path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+        </symbol>
+        <symbol id="archive" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor">
+        <g><rect fill="none" height="24" width="24"/></g><g><g><path d="M20,2H4C3,2,2,2.9,2,4v3.01C2,7.73,2.43,8.35,3,8.7V20c0,1.1,1.1,2,2,2h14c0.9,0,2-0.9,2-2V8.7c0.57-0.35,1-0.97,1-1.69V4 C22,2.9,21,2,20,2z M19,20H5V9h14V20z M20,7H4V4h16V7z"/><rect height="2" width="6" x="9" y="12"/></g></g>
+        </symbol>
+        <symbol id="feeds" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor">
+        <path d="M0 0h24v24H0V0z" fill="none"/><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+        </symbol>
+        <symbol id="menu" width="23" height="23" viewBox="0 0 23 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M21 11.5C21 16.7467 16.7467 21 11.5 21C6.25329 21 2 16.7467 2 11.5C2 6.25329 6.25329 2 11.5 2C16.7467 2 21 6.25329 21 11.5ZM23 11.5C23 17.8513 17.8513 23 11.5 23C5.14873 23 0 17.8513 0 11.5C0 5.14873 5.14873 0 11.5 0C17.8513 0 23 5.14873 23 11.5ZM6.5 10C7.32843 10 8 10.6716 8 11.5C8 12.3284 7.32843 13 6.5 13C5.67157 13 5 12.3284 5 11.5C5 10.6716 5.67157 10 6.5 10ZM13 11.5C13 10.6716 12.3284 10 11.5 10C10.6716 10 10 10.6716 10 11.5C10 12.3284 10.6716 13 11.5 13C12.3284 13 13 12.3284 13 11.5ZM16.5 10C17.3284 10 18 10.6716 18 11.5C18 12.3284 17.3284 13 16.5 13C15.6716 13 15 12.3284 15 11.5C15 10.6716 15.6716 10 16.5 10Z"/>
+        </symbol>
+        <symbol id="menu-close" width="23" height="23" viewBox="0 0 23 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M21 11.5C21 16.7467 16.7467 21 11.5 21C6.25329 21 2 16.7467 2 11.5C2 6.25329 6.25329 2 11.5 2C16.7467 2 21 6.25329 21 11.5ZM23 11.5C23 17.8513 17.8513 23 11.5 23C5.14873 23 0 17.8513 0 11.5C0 5.14873 5.14873 0 11.5 0C17.8513 0 23 5.14873 23 11.5ZM11.5 9.949L15.449 6L17 7.551L13.051 11.5L17 15.449L15.449 17L11.5 13.051L7.551 17L6 15.449L9.949 11.5L6 7.551L7.551 6L11.5 9.949Z"/>
+        </symbol>
+        <symbol id="tags" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor">
+        <path d="M0 0h24v24H0V0z" fill="none"/>
+        <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM13 20.01L4 11V4h7v-.01l9 9-7 7.02z"/><circle cx="6.5" cy="6.5" r="1.5"/>
+        </symbol>
+        </defs>
+    </svg>
+
+    <site-nav>
+        <a href="/">John Lee’s Blog</a>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_142_19040)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.04018 17.599L8.06525 17.6241C9.06554 16.6238 9.78883 16.7007 10.9969 17.9088L12.9051 19.817C14.8903 21.8022 16.7447 21.7021 18.9607 19.4861L19.6378 18.809L18.1989 17.3701L17.8527 17.7164C16.5985 18.9706 15.7213 18.986 14.521 17.7856L12.2819 15.5465C11.1277 14.3924 9.98119 14.2769 8.88087 15.1926L8.66543 14.9771C9.60416 13.8384 9.51182 12.7765 8.39612 11.6608L6.38785 9.65253C5.16442 8.42911 5.17211 7.57501 6.44171 6.30542L6.78796 5.95917L5.35678 4.52799L4.67966 5.2051C2.45595 7.42882 2.33284 9.24472 4.27186 11.1837L5.92618 12.8381C7.13422 14.0461 7.21116 14.7848 6.21857 15.7774L6.22588 15.7847C5.78323 16.2897 5.80277 17.0586 6.28451 17.5404C6.76624 18.0221 7.53515 18.0416 8.04018 17.599Z" fill="currentColor"/>
+            <path d="M13.1937 12.4492C13.6958 11.9471 13.6958 11.133 13.1937 10.6309C12.6916 10.1288 11.8775 10.1288 11.3754 10.6309C10.8733 11.133 10.8733 11.9471 11.3754 12.4492C11.8775 12.9513 12.6916 12.9513 13.1937 12.4492Z" fill="currentColor"/>
+            <path d="M16.224 9.4189C16.7261 8.9168 16.7261 8.10273 16.224 7.60063C15.7219 7.09853 14.9078 7.09853 14.4057 7.60063C13.9036 8.10273 13.9036 8.9168 14.4057 9.4189C14.9078 9.92101 15.7219 9.92101 16.224 9.4189Z" fill="currentColor"/>
+            <path d="M19.2548 6.38814C19.7569 5.88604 19.7569 5.07197 19.2548 4.56987C18.7527 4.06776 17.9386 4.06776 17.4365 4.56987C16.9344 5.07197 16.9344 5.88604 17.4365 6.38814C17.9386 6.89024 18.7527 6.89024 19.2548 6.38814Z" fill="currentColor"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_142_19040">
+            <rect width="24" height="24" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+        </a>
+    </site-nav>
+
+    <script>
+        // Pulled from the CSS theme variables
+        const colors = [
+        "blue",
+        "red",
+        "green",
+        // "yellow",
+        "pink",
+        "purple",
+        // "orange",
+        // not supported as UI themes—yet
+        // "mint",
+        // "teal",
+        // "cyan",
+        // "brown",
+        // "indigo",
+        ];
+
+        class SiteNav extends HTMLElement {
+        constructor() {
+        super();
+
+        let initialColor = localStorage.getItem("theme-color") || "blue";
+        this.setColor(initialColor);
+
+        const links = Array.from(this.children);
+        const homeLink = links.filter((el) => el.getAttribute("href") === "/")[0];
+        const otherLinks = links.filter((el) => el.getAttribute("href") !== "/");
+
+        this.setAttribute("has-js", true);
+
+        this.innerHTML = /*html*/ `
+        <div class="sn-top">
+        ${homeLink.outerHTML}
+        <button aria-label="Menu">
+            <svg class="icon">
+            <use xlink:href="#menu"></use>
+            </svg>
+        </button>
+        </div>
+        <div class="sn-bottom">
+
+        <div class="sn-bottom-section">
+            <h5>Theme</h5>
+            <form class="sn-color-picker">
+            ${colors
+                .map(
+                (color) => /*html*/ `
+                <input
+                    id="color-${color}"
+                    type="radio"
+                    name="color"
+                    value="${color}"
+                    ${color === initialColor ? "checked" : ""}
+                >
+                <label
+                    for="color-${color}"
+                    style="background-color: hsl(var(--c-${color}-h) var(--c-${color}-s) var(--c-${color}-l))">
+                    ${color}
+                </label>
+            `
+                )
+                .join("")}
+            </form>
+        </div>
+        </div>
+        `;
+        }
+
+        connectedCallback() {
+        const $button = this.querySelector('button[aria-label="Menu"]');
+        const $use = $button.querySelector("svg use");
+        $button.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (this.hasAttribute("open")) {
+        this.removeAttribute("open");
+        $use.setAttribute("xlink:href", "#menu");
+        } else {
+        this.setAttribute("open", true);
+        $use.setAttribute("xlink:href", "#menu-close");
+        }
+        });
+
+        document
+        .querySelector(".sn-color-picker")
+        .addEventListener("change", (e) => {
+        const color = e.target.value;
+        this.setColor(color);
+        });
+        }
+
+        setColor(color) {
+        localStorage.setItem("theme-color", color);
+        document.documentElement.style.setProperty(
+        `--c-theme-h`,
+        `var(--c-${color}-h)`
+        );
+        document.documentElement.style.setProperty(
+        `--c-theme-s`,
+        `var(--c-${color}-s)`
+        );
+        document.documentElement.style.setProperty(
+        `--c-theme-l`,
+        `var(--c-${color}-l)`
+        );
+        }
+        }
+
+        customElements.define("site-nav", SiteNav);
+        ;
+    </script>
+    
+        <h1>Posts</h1>
+
+        <h2>Bible Summaries</h2>
+
+        <ul class="posts-list">
+
+            <li>
+                <a href="blog/genesis.pdf">Genesis</a>
+                <time datetime="2022-03-23T19:00:00.000Z">2022-02-28</time>
+            </li>
+               
+        </ul>
+
+        <h2>Other Writings</h2>
+        
+        <ul class="posts-list">
+            <li>
+                <a href="blog/matthewluke10.pdf" target="_blank">Matthew 10-11 and Luke 9-10: Jesus Sends Out His Disciples</a>
+                <time datetime="2022-03-25T19:00:00.000Z">2022-02-28</time>
+            </li>
+        </ul>
+
+    </body>
 </html>

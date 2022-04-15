@@ -1,5 +1,3 @@
-<!-- Code taken from: https://www.github.com/jimniels/blog/ -->
-
 <!DOCTYPE html>
 <html lang="en-us" id="top">
     <head>
@@ -480,25 +478,31 @@
             }
 
             h1 {
-            font-size: 2.5rem; /* 60px */
-            font-weight: 700;
+                font-size: 2.1rem; /* 60px */
+                font-weight: 500;
             }
 
             h2 {
-            font-size: 2rem; /* 48px */
-            font-weight: 600;
+                font-size: 1.6rem;
+                font-weight: 500;
+                margin-bottom: 0.5rem;
             }
 
             h3 {
-            font-size: 1.5rem; /* 36px */
-            font-weight: 500;
+                font-size: 1.5rem; /* 36px */
+                font-weight: 500;
             }
 
             h4 {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.01rem;
-            font-weight: 700;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            .custom {
+                font-size: 0.9rem;
+                font-weight: 300;
+                color: #A9A9A9;
+                margin-bottom: 3rem;
             }
 
             /* ==========================================================================
@@ -575,158 +579,6 @@
                 body {
                     margin: calc(1.618rem / 2);
                     margin-bottom: calc(1.618rem * 3);
-                }
-            }
-
-            /* =============================================================================
-            Primary Site Navigation
-            ========================================================================== */
-
-            /* When there's no JS */
-            site-nav {
-                display: flex;
-                align-items: center;
-                gap: calc(1.618rem / 4);
-            }
-
-            site-nav a[href="/"] {
-                margin-right: calc(1.618rem / 2);
-            }
-
-            site-nav svg {
-                fill: var(--c-theme);
-            }
-
-            site-nav[has-js] {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            .sn-top {
-                display: flex;
-                align-items: center;
-            }
-
-            @media screen and (max-width: 599px) {
-                .sn-top {
-                    width: 100%;
-                    justify-content: space-between;
-                }
-            }
-
-            .sn-bottom {
-                display: none;
-                padding: calc(1.618rem / 2);
-                background: var(--c-fg);
-                gap: calc(1.618rem / 2);
-                flex-wrap: wrap;
-                margin-left: calc(1.618rem / -2);
-                padding-left: calc(1.618rem / 2);
-                width: calc(100% + calc(1.618rem / 1));
-            }
-            site-nav[has-js][open] .sn-bottom {
-                display: flex;
-            }
-
-            @media screen and (min-width: 600px) {
-                .sn-bottom {
-                    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-                    gap: 1.618rem;
-                    flex-wrap: nowrap;
-                    margin-left: calc(1.618rem * -2);
-                    padding-left: calc(1.618rem * 2);
-                    padding-right: calc(1.618rem * 2);
-                    width: auto;
-                }
-            }
-            @media screen and (min-width: 960px) {
-                .sn-bottom-section {
-                    display: flex;
-                    flex-wrap: wrap;
-                }
-            }
-
-            /* Site Navigation
-            ========================================================================== */
-
-            site-nav[has-js] ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                gap: calc(1.618rem / 2);
-            }
-
-            site-nav button {
-                background: transparent;
-                border: none;
-                margin: 0;
-                padding: 0;
-                color: var(--c-theme);
-                border-radius: var(--border-radius);
-                display: flex;
-                align-items: center;
-                padding: calc(1.618rem / 6);
-            }
-
-            site-nav button:hover {
-                background: var(--c-fg);
-            }
-
-            site-nav ul li {
-                display: flex;
-                align-items: center;
-            }
-
-            site-nav ul a {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                position: relative;
-            }
-
-            site-nav[has-js] h5 {
-                font-size: 1rem;
-                margin: 0 calc(1.618rem / 4) 0 0;
-            }
-
-            site-nav[has-js] h5:after {
-                content: ":";
-            }
-
-            .sn-color-picker {
-                display: flex;
-                align-items: center;
-                gap: calc(1.618rem / 2);
-                position: relative;
-                top: 2px;
-            }
-
-            .sn-color-picker input {
-                display: none;
-            }
-
-            .sn-color-picker label {
-                width: 24px;
-                height: 24px;
-                border: 3px solid var(--c-fg);
-                display: block;
-                text-indent: -9999px;
-                border-radius: 50%;
-            }
-
-            .sn-color-picker input:checked + label {
-                box-shadow: 0 0 0 2px var(--c-theme);
-            }
-
-            @media screen and (min-width: 600px) {
-                .sn-color-picker {
-                    gap: calc(1.618rem / 4);
-                }   
-                .sn-color-picker label {
-                    width: 21px;
-                    height: 21px;
-                    border-width: 2px;
                 }
             }
 
@@ -914,8 +766,8 @@
         </defs>
     </svg>
 
-    <site-nav>
-        <a href="/">John Lee’s Blog</a>
+    <!-- <site-nav>
+        <a href="/">John’s Blog</a>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_142_19040)">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.04018 17.599L8.06525 17.6241C9.06554 16.6238 9.78883 16.7007 10.9969 17.9088L12.9051 19.817C14.8903 21.8022 16.7447 21.7021 18.9607 19.4861L19.6378 18.809L18.1989 17.3701L17.8527 17.7164C16.5985 18.9706 15.7213 18.986 14.521 17.7856L12.2819 15.5465C11.1277 14.3924 9.98119 14.2769 8.88087 15.1926L8.66543 14.9771C9.60416 13.8384 9.51182 12.7765 8.39612 11.6608L6.38785 9.65253C5.16442 8.42911 5.17211 7.57501 6.44171 6.30542L6.78796 5.95917L5.35678 4.52799L4.67966 5.2051C2.45595 7.42882 2.33284 9.24472 4.27186 11.1837L5.92618 12.8381C7.13422 14.0461 7.21116 14.7848 6.21857 15.7774L6.22588 15.7847C5.78323 16.2897 5.80277 17.0586 6.28451 17.5404C6.76624 18.0221 7.53515 18.0416 8.04018 17.599Z" fill="currentColor"/>
@@ -930,7 +782,7 @@
                 </defs>
             </svg>
             </a>
-    </site-nav>
+    </site-nav> -->
 
     <script>
         // Pulled from the CSS theme variables
@@ -939,7 +791,7 @@
         "red",
         "green",
         // "yellow",
-        "pink",
+        // "pink",
         "purple",
         // "orange",
         // not supported as UI themes—yet
@@ -1046,24 +898,25 @@
         ;
     </script>
     
-        <h1>Posts</h1>
+        <h2>John's Blog</h2>
+        <div class="custom">bible / theology / history</div>
 
-        <h2>Bible Summaries</h2>
+        <h3>Bible Summaries</h3>
 
         <ul class="posts-list">
 
             <li>
-                <a href="blog/bible_genesis.pdf" target="_blank">Genesis</a>
+                <a href="blog/Genesis.pdf" target="_blank">Genesis</a>
                 <time datetime="2022-03-23T19:00:00.000Z">2022-02-28</time>
             </li>
                
         </ul>
 
-        <h2>Other Writings</h2>
+        <h3>Writings</h3>
         
         <ul class="posts-list">
             <li>
-                <a href="blog/other_matthewluke10.pdf" target="_blank">Matthew 10-11 and Luke 9-10: Jesus Sends Out His Disciples</a>
+                <a href="blog/matthew1011.pdf" target="_blank">Matthew 10-11 and Luke 9-10: Jesus Sends Out His Disciples</a>
                 <time datetime="2022-03-25T19:00:00.000Z">2022-02-28</time>
             </li>
         </ul>

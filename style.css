@@ -4,29 +4,52 @@ body {
     letter-spacing: 0.5px;  
 }
 
-.main {
-    width: 40%;    
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.content-with-sidebars {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.name {
-    font-size: 34px;
-    font-weight: 300;
-    margin-bottom: 7%;
+.content-with-sidebars > * {
+    width:100%;
+}
+
+/* tablet breakpoint */
+@media (min-width:768px) {
+    .content-with-sidebars > * {
+        width:50%;
+    }
+    .content-with-sidebars > *:nth-child(1) {
+        width:100%;
+        padding: 2%;
+    }
+}
+
+/* desktop breakpoint */
+@media (min-width:1024px) {
+    .content-with-sidebars > * {
+        width:15%;
+    }
+    .content-with-sidebars > *:nth-child(1) {
+        width:70%;
+    }
+    .content-with-sidebars > *:nth-child(2) {
+        order:-1;
+    }
+}
+
+.main {
+    margin-top: 7%;
 }
 
 .title {
     color: rgba(0,132,255,.95);
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 300;
     margin-bottom: 2%;
 }
 
 .text {
-    font-size: 18px;
+    font-size: 26px;
     font-weight: 300; 
 }
 
